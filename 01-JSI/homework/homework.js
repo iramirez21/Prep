@@ -28,48 +28,52 @@ const nuevoModulo = 21 % 5 === 1;
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-
+return x - y
 }
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-
+if(x === y) return true
+return false
 }
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-
+if(str1.length === str2.length) return true
+return false
 }
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-
+if(num < 90) return true
+return false
 }
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-
+if(num%2 !== 0) return true
+return false
 }
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // Ojo: No es raiz cuadrada!
   // Tu código:
-
+return num ** 2 
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-
+return num ** exponent 
 }
 
 function esPositivo(numero) {
@@ -77,7 +81,13 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
+if(numero > 0) {return "Es positivo"
 
+}
+if(numero < 0) {return "Es negativo"
+
+}
+else return false
 }
 
 function combinarNombres(nombre, apellido) {
@@ -90,14 +100,17 @@ function combinarNombres(nombre, apellido) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   // Tu código:
-
+return lado * 4
 }
 
 function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   // Tu código:
-  
+  const dolar = 1.20
+  var resultado = euro * dolar
+  return resultado
+
 }
 
 
@@ -107,6 +120,14 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Tu código:
 
+if(letra.length > 1) {
+  return "Dato incorrecto"
+}
+if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
+  return "Es vocal"
+}
+else return "dato incorrecto"
+
 }
 
 function obtenerMayor(x, y) {
@@ -114,6 +135,11 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+if(x >= y) {
+  return x
+}
+  return y
+
 
 }
 
@@ -144,6 +170,10 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
+if(numero === 10 || numero === 5) {
+return true
+}
+else return false
 
 }
 
@@ -151,7 +181,10 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-
+if(numero < 50 && numero > 20){
+  return true
+}
+else return false
 }
 
 function esPrimo(numero) {
