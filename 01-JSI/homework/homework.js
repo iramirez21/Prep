@@ -94,6 +94,8 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
+var conbinacion = nombre + " " + apellido
+return conbinacion
 
 }
 
@@ -164,6 +166,19 @@ function colors(color) {
   //Usar el statement Switch.
   // Tu código:
 
+switch(color) {
+case "blue":
+return "This is blue";
+case "red":
+return "This is red";
+case "green":
+return "This is green";
+case "orange":
+return "This is orange"; 
+
+default:
+  return "Color not found"
+}
 }
 
 function esDiezOCinco(numero) {
@@ -194,7 +209,15 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   // Tu código:
-
+if(numero > 1) {
+for (var i = 2; i < numero; i++){
+if(numero % i === 0){
+  return false;
+}
+}
+return true;
+}
+return false
 }
 
 function doWhile(numero) {
@@ -202,7 +225,13 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Pueden usar un while o un bucle do ... while (Investigarlo si quieren hacerlo de la segunda forma)
   // Tu código:
-  
+  var contador = 0
+  do{
+    numero += 5;
+    contador ++
+  } while (contador < 8);
+  return numero;
+
 }
 
 
