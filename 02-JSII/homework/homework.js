@@ -3,22 +3,36 @@
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-
+return array [array.length - 1]
 }
 
 function incrementarPorUno(array) {
   // "array" debe ser una arreglo de números enteros
   // Aumenta cada número por 1 y devuelve el array
   // Tu código:
-
+var nuevoarray = []
+for (var i = 0 ; i < array.length; i++) {
+var numero = array[i]
+nuevoarray.push(numero + 1)
+}
+return nuevoarray
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-
+  array.push(elemento)          
+  return array
 }
+
+
+//------PUSH AÑADE UN ELEMENTO AL FINAL DEL ARREGLO
+//------POP ELIMINAR EL ULTIMO ELEMENTO DEL ARREGLO
+
+//------UNSHIFT AÑADE UN ELEMENTO AL PRINCIPIO DEL ARREGLO
+//------SHIFT ELIMINAR EL PRIMER ELEMENTO DEL ARREGLO
+
 
 function dePalabrasAFrase(palabras) {
   // "palabras" es un array de strings/cadenas
@@ -27,20 +41,43 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
 
+  // var frase = " "
+  // for (var i = 0; i < palabras.length; i++) {
+  //   frase = frase + palabras[i] + " "
+    
+  // }
+  // return frase
+
+return palabras.join(" ")    // JOIN CONCATENA TODOS LOS ELEMENTOS EN UNA STRING
+
+
 }
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+// for(var i = 0; i<array.length; i++)
+// if (array[i] === elemento) {
+//   return true
+// }
+// return false
+// }
 
-}
+return array.includes(elemento) // includes se fija si existe el elemento o no dentro de un arreglo
+  }
+
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser un array de enteros
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-
+    var suma = 0
+    for (var i = 0; i < resultadosTest.length; i++) {
+     suma = suma +resultadosTest[i]
+      
+    }
+    return suma / resultadosTest.length
 }
 
 function numeroMasGrande(numeros) {
